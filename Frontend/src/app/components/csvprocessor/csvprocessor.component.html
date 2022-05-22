@@ -1,0 +1,64 @@
+<div>
+    <div class="main-container">
+        <div class="info-container grid-container">
+            <div class="list-section grid-item" *ngIf="!processed || processed.length === 0; else showRecords">
+                No hay ningun fichero procesado recientemente
+            </div>
+            <ng-template #showRecords>
+                <div class="list-section grid-item">
+                    <table class="table table-striped table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Texto base 64</th>
+                            <th scope="col">Delimitador</th>
+                            <th scope="col">Fecha de creación</th>
+                            <th scope="col">Actualización</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of processed">
+                            <th scope="row">{{item.id}}</th>
+                            <td>{{item.name}}</td>
+                            <td>{{item.fileAsBase64}}</td>
+                            <td>{{item.delimiter}}</td>
+                            <td>{{item.creationDate}}</td>
+                            <td>{{item.lastUpdate}}</td>
+                          </tr>                        
+                        </tbody>
+                      </table>
+                </div>
+            </ng-template>
+            <div class="controls grid-item">
+                <form [formGroup]="form">
+                    <div class="form-group">
+                        <label for="name" class="control-label">Nombre</label>
+                        <input formControlName="name" id="name" type="text" class="form-control" placeholder="Nombre con el que se guardara registro">
+                        <div *ngIf="form.controls['name'].touched && form.invalid">
+                            <div *ngIf="form.controls['name'].hasError('required')" class="alert alert-danger mt-1">Campor requerido</div>        
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="delimiter" class="control-label">Delimitador</label>
+                        <input formControlName="delimiter" id="delimiter" type="text" class="form-control" placeholder="Vacio para utiliza ','">
+                        <div *ngIf="form.touched && form.invalid">
+                            <div *ngIf="form.controls['delimiter'].hasError('required')" class="alert alert-danger mt-1">Campo requerido</div>        
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="control-label">Adjuntar archivo</label>
+                        <input formControlName="file" id="file" type="file" class="form-control"
+                            (change)="onFileChange($event)">
+                        <div *ngIf="form.controls['file'].touched && form.invalid">
+                            <div *ngIf="form.controls['file'].hasError('required')" class="alert alert-danger mt-1">Archivo requerido</div>
+                            <div *ngIf="form.controls['file'].hasError('requiredFileType')" class="alert alert-danger mt-1">Formato invalido
+                                adjuntar solo .csv</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

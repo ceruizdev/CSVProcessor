@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "I3rMN2jhSkMg4z7bFgF4rTNZg6DNEBJcXEMZaNdhauA=",
+  "Source": "CSVApplication.WebAPI",
+  "BasePath": "_content/CSVApplication.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

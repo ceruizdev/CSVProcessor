@@ -1,0 +1,183 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Business\\CSVApplication.Business.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Business\\CSVApplication.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Business\\CSVApplication.Business.csproj",
+        "projectName": "CSVApplication.Business",
+        "projectPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Business\\CSVApplication.Business.csproj",
+        "packagesPath": "C:\\Users\\cerui\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cerui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Core\\CSVApplication.Core.csproj": {
+                "projectPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Core\\CSVApplication.Core.csproj"
+              },
+              "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Entities\\CSVApplication.Entities.csproj": {
+                "projectPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Entities\\CSVApplication.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Core\\CSVApplication.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Core\\CSVApplication.Core.csproj",
+        "projectName": "CSVApplication.Core",
+        "projectPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Core\\CSVApplication.Core.csproj",
+        "packagesPath": "C:\\Users\\cerui\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cerui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Entities\\CSVApplication.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Entities\\CSVApplication.Entities.csproj",
+        "projectName": "CSVApplication.Entities",
+        "projectPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Entities\\CSVApplication.Entities.csproj",
+        "packagesPath": "C:\\Users\\cerui\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cerui\\OneDrive\\Desktop\\Project\\Backend\\CSVApplication.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cerui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
