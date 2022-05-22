@@ -1,9 +1,11 @@
+using AutoMapper;
 using CSVApplication.Business.Services;
 using CSVApplication.Core.Interfaces;
 using CSVApplication.Core.Models;
 using CSVApplication.DataAccess;
 using CSVApplication.DataAccess.Repository;
 using CSVApplication.Entities;
+using CSVApplication.WebAPI.DTO;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,8 +41,8 @@ app.UseSwaggerUI();
 // API list
 app.MapGet("/", (CSVBodyService service) => "Welcome to my minimal API Service built with .NET 6.0, for more information please consult documentation in /swagger");
 app.MapGet("/getAll", (CSVBodyService service) => service.GetAll());
-app.MapPost("/create", (CSVBodyModel model, CSVBodyService service) => service.Create(model));
-app.MapPut("/update", (CSVBodyModel model, CSVBodyService service) => service.Update(model));
+app.MapPost("/create", (CSVBodyDTO model, CSVBodyService service, IMapper mapper) => service.Create(mapper.Map<CSVBodyModel>(model)));
+app.MapPut("/update", (CSVBodyDTO model, CSVBodyService service, IMapper mapper) => service.Update(mapper.Map<CSVBodyModel>(model)));
 app.MapDelete("/delete/{id}", (int id, CSVBodyService service) => service.Delete(id));
 
 app.Run();

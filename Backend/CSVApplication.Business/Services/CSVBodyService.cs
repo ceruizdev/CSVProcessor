@@ -21,9 +21,10 @@ namespace CSVApplication.Business.Services
             _mapper = mapper;
         }
         public CSVBodyModel Create(CSVBodyModel CSV)
-
         {
             var item = _repository.Create(_mapper.Map<CSVBodyEntity>(CSV));
+            item.CreationDate = DateTime.Now;
+            item.LastUpdate = DateTime.Now;
             return _mapper.Map<CSVBodyModel>(item);
         }
 

@@ -10,11 +10,9 @@ export class CSV {
 
   constructor(private http: HttpClient) { }
 
-  processFile(object: CSVBody) {
-    const filter = this.getParams({object});
-    const ruteApi = `${environment.url_api}/BankMovement`;
-    return this.http.get<CSVBody>(ruteApi, {
-      params: filter});
+  processFile(model: CSVBody) {
+    const ruteApi = `${environment.url_api}/create`;
+    return this.http.post<CSVBody>(ruteApi, model);
   }
 
   getAll() {

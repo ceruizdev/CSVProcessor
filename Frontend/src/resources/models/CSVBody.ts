@@ -5,5 +5,5 @@ export interface CSVBody {
     creationDate?: Date,
     lastUpdate?: Date 
     delimiter: string,
-    informationDecoded: string[],
+    informationDecoded?: string[],
 }

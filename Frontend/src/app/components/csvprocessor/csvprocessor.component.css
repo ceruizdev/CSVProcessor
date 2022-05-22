@@ -23,8 +23,19 @@
     text-align: center;
   }
 
-  .list-section{
+  .list-section {
     border-right: 5px dotted #000;
+  }
+
+  .table-info{
+    table-layout: fixed;
+    width: 100%t;
+  }
+
+  .table-info td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .control-label{
