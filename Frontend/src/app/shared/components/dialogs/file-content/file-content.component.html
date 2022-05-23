@@ -1,0 +1,27 @@
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" [ngClass]="{'active': full}" aria-current="page" (click)="showFullContent()">Texto completo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="showSplittedContent()" [ngClass]="{'active': splitted}">Dividido</a>
+        </li>
+    </ul>
+    <div>
+        <div class="form-group" *ngIf="full">
+            <textarea class="form-control" [value]="data.fullContent" id="ContentFile" rows="20" readonly></textarea>
+        </div>
+        <div class="form-group" *ngIf="splitted">
+            <table class="table">
+                <tbody>
+                  <tr *ngFor="let item of splittedWords">
+                    <td scope="row">{{item}}</td>
+                  </tr>
+                </tbody>
+            </table>
+            <div style="text-align: right;">
+                <button *ngIf="final < data.splittedContent.length" (click)="addRegistries()" class="btn btn-primary">Ver mas</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,21 +5,36 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CSVProcessorComponent } from './components/csvprocessor/csvprocessor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SpinnerModule } from './shared/components/spinner/spinner.module';
+import { SpinnerInterceptor } from './shared/interceptors/spinner.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { FileContentComponent } from './shared/components/dialogs/file-content/file-content.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CSVProcessorComponent
+    CSVProcessorComponent,
+    FileContentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SpinnerModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
-  providers: [],
+  entryComponents: [FileContentComponent],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
