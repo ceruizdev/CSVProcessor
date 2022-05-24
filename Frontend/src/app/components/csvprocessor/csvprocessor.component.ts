@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { lastValueFrom, map, Observable, ReplaySubject } from 'rxjs';
 import { CSVBody } from 'src/resources/models/CSVBody';
-import { CSV } from 'src/resources/services/CSVService/csv.service';
+
 import { requiredFileType } from 'src/resources/validators/fileValidator';
 import { ToastrService } from 'ngx-toastr';
 import { FileContentComponent } from 'src/app/shared/components/dialogs/file-content/file-content.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ProcessedFile } from 'src/resources/models/procesedFile';
+import { CSV } from 'src/resources/services/csv/csv.service';
 
 @Component({
   selector: 'app-csvprocessor',

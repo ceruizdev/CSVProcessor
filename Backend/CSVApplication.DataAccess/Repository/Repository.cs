@@ -40,7 +40,7 @@ namespace CSVApplication.DataAccess.Repository
             return context.Set<TEntity>().ToList();
         }
 
-        public TEntity GetByExpression(Expression<Func<TEntity, bool>> expr)
+        public TEntity? GetByExpression(Expression<Func<TEntity, bool>> expr)
         {
             return context.Set<TEntity>().FirstOrDefault(expr);
         }

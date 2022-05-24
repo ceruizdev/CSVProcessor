@@ -13,6 +13,6 @@ namespace CSVApplication.Core.Interfaces
         public CSVBodyModel Update(CSVBodyModel CSV);
         public List<CSVBodyModel> GetAll();
         public void Delete(int id);
-        public List<string> ProcessString(string CSVContent, string delimiter);
+        public ProcessedFileModel ProcessString(CSVBodyModel CSV);
     }
 }

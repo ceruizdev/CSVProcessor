@@ -22,9 +22,9 @@ namespace CSVApplication.Business.Services
         }
         public CSVBodyModel Create(CSVBodyModel CSV)
         {
+            CSV.CreationDate = DateTime.Now;
+            CSV.LastUpdate = DateTime.Now;
             var item = _repository.Create(_mapper.Map<CSVBodyEntity>(CSV));
-            item.CreationDate = DateTime.Now;
-            item.LastUpdate = DateTime.Now;
             return _mapper.Map<CSVBodyModel>(item);
         }
 
@@ -36,8 +36,18 @@ namespace CSVApplication.Business.Services
 
         public List<CSVBodyModel> GetAll() => _mapper.Map<List<CSVBodyModel>>(_repository.GetAll());
 
-        public List<string> ProcessString(string CSVContent, string delimiter) => CSVContent.Split(delimiter).ToList();
-        
+        public ProcessedFileModel ProcessString(CSVBodyModel CSV)
+        {
+            ProcessedFileModel procesedFileModel = new ProcessedFileModel();
+            if (CSV.FileAsBase64 != null && !CSV.FileAsBase64.Equals(""))
+            {
+                Byte[] bytes = Convert.FromBase64String(CSV.FileAsBase64);
+                procesedFileModel.fullContent = Encoding.Default.GetString(bytes);
+                procesedFileModel.SetSplittedText(CSV.Delimiter);
+            }
+            return procesedFileModel;
+        }
+
 
         public CSVBodyModel Update(CSVBodyModel CSV)
         {

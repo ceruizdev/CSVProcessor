@@ -16,6 +16,10 @@ namespace CSVApplication.WebAPI.Mapper
         {
             CreateMap<CSVBodyDTO, CSVBodyModel>().ReverseMap();
             CreateMap<CSVBodyModel, CSVBodyEntity>().ReverseMap();
+            CreateMap<ProcessedFileDTO, ProcessedFileModel>().ReverseMap();
+            CreateMap<UserLoginDTO, UserLoginModel>().ReverseMap();
+            CreateMap<UserDTO, UserModel>().ReverseMap();
+            CreateMap<UserModel, UserEntity>().ReverseMap();
         }
     }
 }

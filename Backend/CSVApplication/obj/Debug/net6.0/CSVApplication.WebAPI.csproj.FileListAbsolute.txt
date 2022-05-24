@@ -129,3 +129,4 @@ C:\Users\cerui\OneDrive\Desktop\Project\Backend\CSVApplication\bin\Debug\net6.0\
 C:\Users\cerui\OneDrive\Desktop\Project\Backend\CSVApplication\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\cerui\OneDrive\Desktop\Project\Backend\CSVApplication\bin\Debug\net6.0\CSVApplication.Business.dll
 C:\Users\cerui\OneDrive\Desktop\Project\Backend\CSVApplication\bin\Debug\net6.0\CSVApplication.Business.pdb
+C:\Users\cerui\OneDrive\Desktop\Project\Backend\CSVApplication\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

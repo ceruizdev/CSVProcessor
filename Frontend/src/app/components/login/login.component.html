@@ -1,0 +1,19 @@
+<div class="center mt-5">
+    <div class="card center" style="width: 70%;">
+        <div class="card-body">
+            <form [formGroup]="form">
+                <div class="p-2">
+                    <label for="userName">Usuario</label>
+                    <input formControlName="userName" type="text" class="form-control" />
+                </div>
+                <div class="p-2">
+                    <label for="password">Contraseña</label>
+                    <input formControlName="password" type="password" class="form-control" />
+                </div>
+                <div class="m-1" style="text-align: right;">
+                    <button class="btn btn-primary" [disabled]="!form.valid" (click)="login()">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

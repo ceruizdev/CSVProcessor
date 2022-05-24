@@ -12,13 +12,16 @@ import { ToastrModule } from 'ngx-toastr';
 import { FileContentComponent } from './shared/components/dialogs/file-content/file-content.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { CookieService } from 'ngx-cookie-service';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CSVProcessorComponent,
-    FileContentComponent
+    FileContentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   entryComponents: [FileContentComponent],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true},
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
