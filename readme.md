@@ -1,5 +1,5 @@
 # CSV Project
-##### _Upload, Read and modify csv files_
+##### _Upload and Read csv files_
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
@@ -29,14 +29,15 @@ If there's not errors and the database is ok, continue..
 - Make sure the file 'Frontend/src/environment/environment.ts' has the right port of backend project
 - In terminal run the command "ng server"
 
-Note: With the migration you have two users for test the application
+Note: With the migration you have two users for testing the application
 
+User #1
 - Username: Administrator 
 - Password: Test123
 - Permission: Read, Create, Delete
 
-
-
+---
+User #2
 - Username: carlos93
 - Password: Test321
 - Permission: Read
