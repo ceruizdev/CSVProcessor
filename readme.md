@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Minimal API built with .Net 6.0
+Minimal API built with .Net 6.0, Angular 13, JWT
 ## Requirements
 -  [Visual Studio 2022](https://visualstudio.microsoft.com/es/vs/) 
 -  [Visual Code](https://code.visualstudio.com/) (optional)
@@ -24,8 +24,8 @@ Minimal API built with .Net 6.0
 - Run the project with layer CSVApplication.WebApi as startup project
 If there's not errors and the database is ok, continue..
 
-### Fronted
-- In the terminal find the fronted folder and type the command "npm install"
+### Frontend
+- In the terminal find the frontend folder and type the command "npm install"
 - Make sure the file 'Frontend/src/environment/environment.ts' has the right port of backend project
 - In terminal run the command "ng server"
 
@@ -34,6 +34,8 @@ Note: With the migration you have two users for test the application
 - Username: Administrator 
 - Password: Test123
 - Permission: Read, Create, Delete
+
+
 
 - Username: carlos93
 - Password: Test321
