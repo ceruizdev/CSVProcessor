@@ -25,9 +25,9 @@ Minimal API built with .Net 6.0
 If there's not errors and the database is ok, continue..
 
 ### Fronted
-- In the fronted folder type the command "npm install"
+- In the terminal find the fronted folder and type the command "npm install"
 - Make sure the file 'Frontend/src/environment/environment.ts' has the right port of backend project
-- Run the command ng server
+- In terminal run the command "ng server"
 
 Note: With the migration you have two users for test the application
 
